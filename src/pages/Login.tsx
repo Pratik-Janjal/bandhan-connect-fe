@@ -109,9 +109,9 @@ const Login: React.FC = () => {
                 <input type="checkbox" className="rounded border-gray-300 text-saffron focus:ring-saffron" />
                 <span className="ml-2 text-sm text-gray-600">Remember me</span>
               </label>
-              <Link to="/forgot-password" className="text-sm text-saffron hover:text-orange-600">
+              {/* <Link to="/forgot-password" className="text-sm text-saffron hover:text-orange-600">
                 Forgot password?
-              </Link>
+              </Link> */}
             </div>
 
             <button
