@@ -14,7 +14,9 @@ import {
   sampleCommunityQueries
 } from '../data/sampleData';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+// const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+const API_BASE_URL = 'https://bandhan-connect-be.onrender.com/api';
+
 const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000';
 
 // Socket.IO connection
