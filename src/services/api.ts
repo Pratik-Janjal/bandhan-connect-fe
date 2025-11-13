@@ -380,9 +380,16 @@ export const communityAPI = {
     return response.data;
   },
   
-  createPost: async (postData: any) => {
-    const response = await api.post('/posts', postData);
-    return response.data;
+  createCommunityPost: async (postData: FormData) => {
+    try {
+      const response = await api.post("/posts/create", postData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+      return response.data;
+    } catch (error: any) {
+      console.error("Upload error:", error);
+      throw error.response?.data || { message: "Failed to create post" };
+    }
   },
   
   likePost: async (postId: string) => {
